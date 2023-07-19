@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="omg">
+    <button onclick="copyClipbord()">OK</button>
+    <p id="data"></p>
+</body>
+<script>
+    function copyClipbord(){
+        var copyText=document.getElementById('omg').value;
+        console.log(copyText)
+        a=[]
+        a.push(copyText)
+        a=a
+        console.log(a)
+        document.getElementById('data').innerHTML=a
+        
+    }
+</script>
+</html>
