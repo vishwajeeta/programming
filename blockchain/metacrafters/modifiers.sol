@@ -17,4 +17,7 @@ modifier onlyOwner{
 function set(uint _a)public onlyOwner{
     a=_a;
 }
+function get()public view onlyOwner returns(uint256){
+    return a;
+}
 }
