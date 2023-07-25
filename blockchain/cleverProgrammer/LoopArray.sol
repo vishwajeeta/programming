@@ -14,5 +14,22 @@ contract looping {
         }
         return sum;
     }
+    function sumWithWhileLoop( ) public view returns(uint256){
+        uint256 sum=0;
+        uint256 i=0;
+        while(i<numbers.length){
+            sum +=numbers[i];
+            i++;
+        }
+        return sum;
+    }
     
+    function sumWith_do_WhileLoop( ) public view returns(uint256){
+        uint256 sum=0;
+        uint256 i=0;
+        do{sum+=numbers[i];
+        i++;
+        }while(i<numbers.length);
+        return sum;
+    }
 }
