@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBJECTS</title>
+</head>
+<body>
+    <h1>Creating javascript objects</h1>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    
+    <script>
+        //javascript is an object orented programming language
+        //a javascript object is like a real-world enitiy having state and behavior. For example, a char
+        //javascript is template base and we can create objects without having a need to create a class
+
+        //ways to create an javascript objects
+        /*1.use object literal to create and define a javascript object*/
+        //syntax:- {name:value}
+
+        var student={
+            name:'vishwa',
+            age:21,
+            studyes:"computer scrience",
+        };
+        document.getElementById('demo').innerHTML=student.name +" is of age "+student.age+" studyes "+student.studyes
+        </script>
+        <script>
+        /*2. use the keyword new to create and define a javascript object*/
+        //syntax:- var obj_name=new object();
+        var student= new Object();
+        student.name="golu",
+        student.age=21,
+        student.studyes='BCA'
+        document.getElementById('demo1').innerHTML=student.name +" is of age "+student.age+" studyes "+student.studyes
+    </script>
+    <script>
+        //3.use an object constructor to create and define a javascript object
+        
+        /*function study(name,age,studies){
+            name=name;
+            this.age=age;
+            this.studies=studies
+        }
+        var omg=study('vishwajeet',21,'bca');
+        
+        console.log(omg.age)
+        document.getElementById('demo2').innerHTML=student.name +" is of age "+student.age+" studyes "+student.studies
+        */
+       let vishwa=(a,b,c,d,e)=>{
+        data=a+b+c+d
+        console.log(data)
+       }
+       a=vishwa(500,500,500,1200)
+    </script>
+</body>
+</html>
