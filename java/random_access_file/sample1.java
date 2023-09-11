@@ -10,7 +10,9 @@ public class Sample1{
             if(s==null){
                 break;
             }
-            System.out.println(Upper(s));
+            System.out.println(s);
+            
         }
+
     }
 }
