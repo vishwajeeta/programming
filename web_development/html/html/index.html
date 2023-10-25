@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ludo Game</title>
+  <style>
+    /* Define the styles for the game board */
+    #board {
+      width: 300px;
+      height: 300px;
+      border: 1px solid black;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .cell {
+      width: 33.33%;
+      height: 33.33%;
+      border: 1px solid black;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .red {
+      background-color: red;
+    }
+    .green {
+      background-color: green;
+    }
+    .blue {
+      background-color: blue;
+    }
+    .yellow {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ludo Game</h1>
+  <div id="board" onclick="alert('button had clicked')"></div>
+
+  <script>
+    // Define the Ludo game logic
+    const players = ['red', 'green', 'blue', 'yellow'];
+    let currentPlayer = 0;
+    let currentPosition = 0;
+
+    // Create the game board
+    const board = document.getElementById('board');
+    for (let i = 0; i < 9; i++) {
+      for (let j = 0; j < 9; j++) {
+        const cell = document.createElement('div');
+        cell.classList.add('cell');
+        if (i === 4 && j === 4) {
+          cell.classList.add(players[currentPlayer]);
+          currentPosition = cell;
+        }
+        board.appendChild(cell);
+      }
+    }
+
+    // Roll the dice and move the current player
+    function rollDice() {
+      const diceValue = Math.floor(Math.random() * 6) + 1;
+      const currentPlayerPosition = Array.from(board.children).indexOf(currentPosition);
+      currentPosition.classList.remove(players[currentPlayer]);
+
+      let newPosition = currentPlayerPosition + diceValue;
+      if (newPosition >= board.children.length) {
+        newPosition = newPosition % board.children.length;
+      }
+      currentPosition = board.children[newPosition];
+      currentPosition.classList.add(players[currentPlayer]);
+
+      currentPlayer = (currentPlayer + 1) % players.length;
+    }
+
+    // Add a button to roll the dice
+    const rollButton = document.createElement('button');
+    rollButton.textContent = 'Roll Dice';
+    rollButton.addEventListener('click', rollDice);
+    document.body.appendChild(rollButton);
+  </script>
+</body>
+</html>

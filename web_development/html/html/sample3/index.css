@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+.navigation_bar{
+    cursor: pointer;
+    display: grid;
+    grid-auto-flow: column;
+    width: 90%;
+    font-size: x-large;
+    background-color: pink;
+    border-bottom: white 5px solid;
+}
+.navigation_bar >div{
+    background-color: pink;
+    margin: 5px;
+}
+.navigation_bar >div:hover{
+    color: white;
+    text-decoration: underline;
+    border-radius: 10px;
+}
+
+.slidebar{
+    background-color: gray;
+    height: 400px;
+}
