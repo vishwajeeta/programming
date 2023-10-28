@@ -4,4 +4,7 @@ while (i<=10-1):
 
     i=i+1
     a.write(f"{i}.hii \n")
-print(a)
+a.close()
+a=open("hii.txt","r")
+omg=a.read()
+print(omg)
