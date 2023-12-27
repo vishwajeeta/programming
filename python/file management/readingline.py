@@ -8,3 +8,4 @@ while True:
         print(f"Number of lines={i-1}")
         print(type(a))
         break
+
