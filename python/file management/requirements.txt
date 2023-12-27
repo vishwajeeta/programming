@@ -1,0 +1,5 @@
+# w for writing [if not there then it will create the file]
+# r for reading 
+# a for appending
+
+wr=open("writing1.txt","w")
