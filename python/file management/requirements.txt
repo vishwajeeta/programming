@@ -1,5 +1,28 @@
 # w for writing [if not there then it will create the file]
 # r for reading 
-# a for appending
+# a for appending [adding content to existing content]
+# x creating a file using python    ,          throw error if already exist
+# rt means open as text file which is default
+# rb it will open as binary [bytes] eg:- img,pdf,exe
 
 wr=open("writing1.txt","w")
+# if we want to use any another file formante insted of "w" we have to close the file else it will throw a error
+wr.close()
+
+#no need to close
+with open("omg.txt","w") as f:
+    f.write("without close")
+    
+#readline()
+# it will read the file untill it has the lines printing line by line
+om=open("omg.txt","r")
+i=0
+while True:
+    a=om.readline()
+    print(a)
+    i+=1
+    if not a:
+        print(f"Number of lines={i-1}")
+        print(type(a))
+        break
+
