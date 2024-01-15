@@ -12,3 +12,7 @@
 #### 5.java
 
 #### 6.c/c++
+
+#### 7.DBMS [SQL/NO-SQL]
+
+#### 8.OOPS
