@@ -1,4 +1,4 @@
-# write a program to demonstrate basic data type in python
+#1. write a program to demonstrate basic data type in python
 
 # integer
 x=20
