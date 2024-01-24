@@ -23,3 +23,13 @@ for i in dict1:
 print("Original dictionary is:",dict1)
 dict1.update({102:'hii',103:'Devananda'})
 print("update dictionary is:",dict1)
+
+#using get()
+print("Original dictionary is:",dict1)
+print(dict1.get(101))
+#if key is not found it will throw an error
+print(dict1.get(104,"Not Found"))
+
+#finding length
+print("Original dictionary is:",dict1)
+print("The length of the given dictionary is:",len(dict1))
