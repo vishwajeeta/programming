@@ -1,3 +1,0 @@
-echo by default matplotlib will install numpy
-pip install matplotlib
-pip install numpy
