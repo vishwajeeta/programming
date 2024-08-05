@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int x,n,result;
+clrscr();
+printf("Enter the position integrger and its power \n");
+scanf("%d %d",&x,&n);
+result=power(x,n);
+printf("result= %d",result);
+getch();
+}
+
+int power(int x,int n)
+{
+int temp=1;
+if(n==0)
+return 1;
+temp=power(x,n/2);
+if((n%2)==0)
+return (temp*temp);
+else
+return (x*temp*temp);
+}

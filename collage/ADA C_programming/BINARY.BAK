@@ -1,0 +1,36 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int n,i,k,arr[20],low,high,pos;
+clrscr();
+printf("Enter the number of elements\n");
+scnaf("%d",&n);
+printf("Enter the number of array in the order\n");
+for(i=0;i<n;i++)
+scanf("%d",&arr[i]);
+
+printf("Enter the element to be searched:");
+scanf("%d",&k);
+low=0;high=n-1;
+pos=binsearch(arr,n,k,low,high);
+if(pos==-1)
+printf("unsucessfull search");
+else
+printf("Element %d found at position %d",k,pos+1);
+getch();
+}
+
+int binsearch(int arr[],int n,int k,int low,int high)
+{
+int mid;
+mid=(low+high)/2;
+if(low>high)
+return -1;
+if(k==arr[mid])
+return mid;
+if(k<arr[mid])
+return binsearch(arr,n,k,low,mid-1);
+else
+return binsearch(arr,n,k,mid+1,high);
+}

@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int i,n,arr[20],pos,k;
+clrscr();
+printf("Enter the size of array:");
+scanf("%d",&n);
+printf("Enter %d elements\n",n);
+for(i=0;i<n;i++)
+scanf("%d",&arr[i]);
+printf("Enter the element to be searched:");
+scanf("%d",&k);
+pos=linsearch(n,arr,k);
+if(pos==-1)
+printf("unsucessfull search");
+else
+printf("Element %d found at position %d",k,pos+1);
+getch();
+}
+int linsearch(int n,int arr[],int k)
+{
+if(n<0)
+return -1;
+if(k==arr[n-1])
+return n-1;
+else
+return linsearch(n-1,arr,k);
+}

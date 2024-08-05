@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<conio.h>
+void main()
+{
+int no_of_disk;
+clrscr();
+printf("enter number of disks:");
+scanf("%d",&no_of_disk);
+toh(no_of_disk,'A','C','B');
+getch();
+}
+
+int toh(int n,char rodA,char rodC,char rodB)
+{
+
+if(n==1)
+{
+printf("\n more disk 1 from rod %c to rod %c",rodA,rodC);
+return ;
+}
+
+toh(n-1,rodA,rodB,rodC);
+printf("\n move disk %d from rod %c to rod %c",n,rodA,rodC);
+toh(n-1,rodB,rodC,rodA);
+}
