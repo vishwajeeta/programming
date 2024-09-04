@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Evaluate</title>
+  </head>
+  <script>
+    const calc=()=>{
+        let expression=document.getElementById("expr").value
+        document.getElementById("exprout").value=eval(expression)
+    }
+  </script>
+  <body>
+    <table width="300" border="2">
+      <center>
+        <tr>
+          <td>Enter valid expression</td>
+          <td>
+            <input type="text" id="expr" />
+          </td>
+        </tr>
+        <tr>
+          <td><input type="button" value="Evaluate" onclick="calc()" /></td>
+        </tr>
+        <tr>
+          <td>Result</td>
+          <td><input type="text" id="exprout" /></td>
+        </tr>
+      </center>
+    </table>
+  </body>
+</html>
