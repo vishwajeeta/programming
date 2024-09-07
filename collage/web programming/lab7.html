@@ -1,0 +1,44 @@
+<html> 
+<head><title>SALARY</title> 
+<script> 
+function findSalary() 
+{ 
+var empname=document.form.ename.value; 
+var edept=document.form.dept.value; 
+var basicpayment=parseInt(document.form.basic.value); 
+var da,hra,tax,pf,grosspay,deductions,netpay; 
+da=basicpayment*0.5; 
+hra=basicpayment*0.3; 
+grosspay=basicpayment+da+hra; 
+pf=grosspay*0.13; 
+tax=grosspay*0.2; 
+deductions=pf+tax; 
+ 
+netpay=grosspay-deductions; 
+document.writeln("Employee Name :<b>"+empname+"</b><br>"); 
+document.writeln("Basic Pay :<b>"+basicpayment+"</b><br>"); 
+document.writeln("DA:<b>"+da+"</b><br/>"); 
+document.writeln("HRA:<b>"+hra+"</b><br/>"); 
+document.writeln("PF:<b>"+pf+"</b><br/>"); 
+document.writeln("TAX :<b>"+tax+"</b><br>"); 
+document.writeln("Gross Salary :<b>"+grosspay+"</b><br>"); 
+document.writeln("Deductions :<b>"+deductions+"</b><br>"); 
+document.writeln("Netpay :<b>"+netpay+"</b><br>"); 
+ 
+} 
+</script> 
+</head> 
+<body bgcolor="yellow" align="left"> 
+<form name="form"> 
+<center><b><h1>EMPLOYEE SALARY</h1></b><br/><br/> 
+<h2>Enter the Name and Basic pay of the Employee</h2>
+
+<pre> 
+    EMPLOYEE NAME <input type="text" name="ename"><br/> 
+    DEPARTMENT <input type="text" name="dept"><br/> 
+    BASIC PAY <input type="text" name="basic"><br/> 
+    </pre> 
+    <input type="button" value="Calculate Net Salary" onclick="findSalary()"> 
+    </center> 
+    </body> 
+    </html>
