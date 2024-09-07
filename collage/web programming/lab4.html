@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html >
-<head>
+<html>
+  <head>
     <title>sum</title>
-</head>
-<script>
-    const sum=()=>{
-    let num=window.prompt("Enter the value of N>>")
-    let n=parseInt(num)
-    let sum=n*(n+1)/2
-    alert("sum of first"+n+"natural number is >>"+sum)
-    }
-</script>
-<body>
+  </head>
+  <script>
+    const sum = () => {
+      let num = window.prompt("Enter the value of N>>");
+      let n = parseInt(num);
+      let sum = (n * (n + 1)) / 2;
+      alert("sum of first" + n + "natural number is >>" + sum);
+    };
+  </script>
+  <body>
     <center>
-        <h1>Find sum of N Natural No.</h1>
-        <form>
-            <input type="button" value="Find sum of Natural Number" onclick="sum()">
-        </form> 
+      <h1>Find sum of N Natural No.</h1>
+      <form>
+        <input
+          type="button"
+          value="Find sum of Natural Number"
+          onclick="sum()"
+        />
+      </form>
     </center>
-</body>
+  </body>
 </html>
