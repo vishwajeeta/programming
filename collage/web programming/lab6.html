@@ -1,0 +1,70 @@
+<html> 
+<head><title>Result</title> 
+<script> 
+function findResult() 
+{ 
+var result=""; 
+var grade=""; 
+var stuname=(document.form.sname.value); 
+var m1=parseInt(document.form.mark1.value); 
+var m2=parseInt(document.form.mark2.value); 
+var m3=parseInt(document.form.mark3.value); 
+var m4=parseInt(document.form.mark4.value); 
+var Total=(m1+m2+m3+m4); 
+var avg=(Total/4); 
+ 
+  if( m1 < 35 || m2 < 35 || m3 < 35) 
+        { 
+            result = "fail"; 
+            grade = "D"; 
+        } 
+        else if(avg >= 75) 
+        { 
+            result = "Distinction"; 
+            grade = "A+"; 
+        } 
+        else if(avg >= 60 && avg < 75) 
+        { 
+            result = "First class"; 
+            grade = "A"; 
+        } 
+        else if(avg >= 50 && avg < 60) 
+        { 
+            result = "Second class"; 
+            grade = "B"; 
+        } 
+        else if(avg >=35 && avg < 50) 
+        { 
+            result = "Pass class"; 
+            grade = "C"; 
+        } 
+        else  if (avg < 35) 
+        { 
+            result = "Fail"; 
+            grade = "D"; 
+        }  
+         
+    
+         document.writeln("Student Name :<b>"+stuname+"</b><br/>"); 
+         document.writeln("Total Marks :<b>"+Total+"</b><br>"); 
+         document.writeln("Average Marks :<b>"+avg+"</b><br/>"); 
+         document.writeln("Result :<b>"+result+"</b><br>"); 
+         document.writeln("Grade :<b>"+grade+"</b><br>"); 
+        } 
+        </script> 
+        </head> 
+        <body bgcolor="pink" align="left"> 
+        <form name="form"> 
+        <center><b><h1>Student Information</h1></b><br/><br/> 
+        <h2>Enter the marks of the student</h2> 
+        <pre> 
+        STUDENT NAME    <input type="text" name="sname" value=""><br> 
+        ANALYSIS & DESIGN ALGORITHM <input type="text" name="mark1"><br/><br/> 
+        COMPUTER GRAPHICS <input type="text" name="mark2"><br/><br/> 
+        SYSTEM PROGRAMMING <input type="text" name="mark3"><br/><br/> 
+        WEB PROGRAMMING    <input type="text" name="mark4"><br/><br/> 
+        </pre> 
+        <input type="button" value="Submit" onClick="findResult()"> 
+        </center> 
+        </body> 
+        </html> 
