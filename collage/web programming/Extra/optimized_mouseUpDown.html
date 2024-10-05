@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      p {
+        color: orange;
+      }
+    </style>
+    <p id="demo">Click me</p>
+    <script>
+        document.getElementById("demo").onmousedown=()=>document.getElementById("demo").innerHTML="mouse is up"
+        document.getElementById("demo").onmouseup=()=>document.getElementById("demo").innerHTML="mouse is down"
+    </script>
+  </body>
+</html>
