@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Content</title>
+</head>
+<body>
+    <label for="Name">Name:</label><input type="text" id="Name" onfocus="help(0)"><br>
+    <label for="Email">Email:</label><input type="text" id="Email" onfocus="help(1)"><br>
+    <label for="Password">Password:</label><input type="text" id="Password" onfocus="help(2)"><br>
+    <input type="text" id="help" size="30">
+</body>
+<script>
+    let msg=new Array(3);
+    msg[0]="Enter your name"
+    msg[1]="Enter your Email"
+    msg[2]="Enter a strong password"
+    const help=(value)=>{
+        document.getElementById("help").value=msg[value]
+        
+    }
+</script>
+</html>
