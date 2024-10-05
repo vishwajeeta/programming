@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseUpDown</title>
+</head>
+<body>
+    <p >This example uses the HTML DOM to assign an "onmousedown" and "onmouseup" element to a p element </p>
+    <p id="demo">click me</p>
+    <script>
+        document.getElementById("demo").onmousedown=()=>mouseDown();
+        document.getElementById("demo").onmouseup=()=>mouseUp();
+        const mouseDown=()=>document.getElementById("demo").innerHTML="The mouse button is held down."
+        const mouseUp=()=>document.getElementById("demo").innerHTML="You released the mouse button."
+    </script>
+</body>
+</html>
