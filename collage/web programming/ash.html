@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SALARY</title>
+    <script>
+        function findSalary()
+        {
+            var empname=document.form.ename.value;
+            var edept=document.form.dept.value;
+            var basicpayment=parseInt(document.forms.basic.value)
+            var da,hra,tax,pf,grosspay,deductions,netpay;
+            da=basicpayment*0.5;
+            hra=basicpayment*0.3;
+            grosspay=basicpayment+da+hra;
+            pf=grosspay*0.13;
+            tax=grosspay*0.2;
+            deductions=pf+tax;
+
+            netpay=grosspay-deductions;
+            document.writeln("Employee Name:<br>"+empname+"</b><br>")
+            document.writeln("Basic Pay:<b>"+basicpayment+"</b><br>")
+            document.writeln("DA:<b>"+da+"</b><br/>");
+            document.writeln
+            document.writeln
+            document.writeln
+            document.writeln
+            document.writeln
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
